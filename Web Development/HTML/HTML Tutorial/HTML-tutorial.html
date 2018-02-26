@@ -1,0 +1,192 @@
+<!DOCTYPE html>			
+<html>
+
+	<head>
+			<title>HTML Tutorial</title>		<!-- Specifies a title for the document -->
+			<link rel="stylesheet" href="HTML-tutorial-styles.css">
+
+	</head>
+
+	<body>
+					<header>
+						<h1>HTML Tutorial</h1>
+						<p>Hyper Text Markup Language - HTML describes the structure of Web pages using markup</p>
+						<nav> *Nav - Usually a Formatted Unordered List* </nav>
+			
+						<h3 class="heading">Header:</h3>
+						A Header represents a container for introductory content or a set of navigational links. Often includes one or more heading (h1-h6) elements:
+							<h1 class="heading">H1</h1>
+							<h2 class="heading">H2</h2>
+							<h3 class="heading">H3</h3>
+							<h4 class="heading">H4</h4>			
+							<h5 class="heading">H5</h5>
+							<h6 class="heading">H6</h6>
+					</header>
+						<hr><!-------------------------------------------------------------- Defines a thematic change in content ------------------------------------------------------------------->
+					
+			<main>
+					
+					<section>
+						<h3>Section:</h3>
+						<section>A Section defines sections in a document, such as chapters, headers, footers, or any other sections of the document</section> <br>
+					<section>
+					
+					<section class="div">
+						<div>
+							<h3>Div element:</h3>
+							<p>a Block-Level element that defines a division or section in a document; Generally used to group block-elements to format them with CSS</p>
+						</div>
+					</section>
+					
+					<section class="div-span">
+						<div>
+							<h3>Div styled with a Span element:</h3>
+							<p><span style="color:red">an Inline element that defines a section in a document</span></p>
+						</div>
+					</section>
+					<hr><!---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+					
+					<p class="paragraph">This is a Paragraph...</p>
+					<p class="paragraph">This is a Paragraph<br> with a line break...</p> 
+	
+					
+					<a href="https://www.w3schools.com">This is a Link to The W3Schools Website</a>
+						 <!-- Link Address --> 
+						 <hr><!------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------>
+					
+					<section class="image">
+						<h3>Image:</h3>
+						<img src="w3schools-pic.jpg" alt="W3Schools.com" width="104" height="142"><br>
+								<!-- Filename   			  //Alternative Text -->
+					</section>
+					
+					<section class="image-link">
+						<h3>Image that's also a Link:</h3>
+						<a href="https://www.w3schools.com">
+								<img src="HTML-pic.png" alt="HTML tutorial" style="width:42px;height:42px;border:0;"> 
+						</a> 
+					</section>
+					<hr><!------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------>
+					
+					<section class="unordered-list">
+						<h3>Unordered List:</h3>
+						<ul>
+							<li>Coffee</li>
+							<li>Tea</li>
+							<li>Milk</li>
+						</ul>
+					</section>
+					
+					<section class="ordered-list">
+						<h3>Ordered List:</h3>
+						<ol>
+							<li>Coffee</li>
+							<li>Tea</li>
+							<li>Milk</li>
+						</ol>
+					</section>
+					
+					<section class="description-list">
+						<h3>Description List:</h3>
+						<dl>
+							<dt>Coffee</dt>
+								<dd>- black hot drink</dd>
+							<dt>Milk</dt>
+								<dd>- white cold drink</dd>
+						</dl> 
+					<!-- Use the CSS property float:left or display:inline to display a list horizontally -->
+					</section>
+					<hr><!--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+					
+					<article>
+						<h3 class="heading">Article:</h3>
+						<p class="definition article">An Article specifies independent, self-contianed content. An article should make sense on its own and 
+								it should be possible to distribute it independently from the rest of the site.</p>
+					</article>	
+					
+					<aside>
+						<h3 class="heading">Aside:</h3>
+						<p class="definition aside">An Aside defines some content aside from the content it is placed in. It should be related to the surrounding content.</p>
+					</aside>
+					
+					<blockquote>
+						<h3 class="heading">Blockquote:</h3>
+						<p class="definition blockquote">A Blockquote defines a long quotation, and/or specifies a section that is quoted from another source. (Browsers usually indent)</p>
+					</blockquote>
+					<hr><!--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+					
+					<h3>Button Tag:</h3>
+					<button type="button">Button</button>
+					<p class="definition button">Defines a clickable button; Can put content (like text or images) inside this element.</p>
+					
+					
+					<h3>Input Tag - Button:</h3>
+					<input type="button" class="inline-block" value="Input Button">
+					<p class="definition input">Specifies an input field where the user can enter data; Input Fields vary depending on the 'type' attribute & <br>
+																is used within a Form Element to declare input controls that allow users to input data.</p>
+					<hr><!--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+					
+					<h3 class="heading">Form Tag:</h3>
+					<p class="definition form">Used to create an HTML form for user input; Can contain one or more of the following elements: <br>
+																input, textarea, button, select, option, optgroup, fieldset, label.</p>
+					<form>
+						<input type="text"><label>Input - Textbox</label>
+					</form>
+					<hr><!--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+					
+					<section class="table">
+						<h3 class="heading">Table:</h3>
+						<p class="definition table">Defines an HTML Table; consists of the elements: table, tr (Table Row), th (Table Header), td (Table Cell) <br>
+																	Complex Tables may include elements: caption, col, colgroup, thead, tfoot, tbody</p>
+						<table>
+							<caption>Meal Plan</caption>
+							<tr>
+								<th>Breakfast</th>
+								<th>Lunch</th>
+								<th>Dinner</th>
+							</tr>
+							<tr>
+								<td>Oatmeal</td>
+								<td>Chicken Wrap</td>
+								<td>Salmon</td>
+							</tr>
+						</table>
+						<hr><!----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+						
+						<details></details>
+						<embed></embed>
+						
+						<hr><!----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+						
+						<section>
+							<h3 class="heading">Figure:</h3>
+							<p class="definition figure">A Figure specifies self-contained content, like illustrations, diagrams, photos, code listings, etc. <br>
+									- Can use to mark up a photo</p>
+							<figure>
+								<img src="cle-pic.jpg" alt="Cleveland Picture">
+								<figcaption>Figure - Cleveland</figcaption><label> - Figcaption</label>
+							</figure>
+						</section>
+						<hr><!------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------>
+						
+						
+						
+						
+
+					
+
+			</main>
+		<footer>
+			<div class="footer">
+			
+			</div>
+		</footer>
+		
+	</body>
+	
+</html>
+
+
+
+
+

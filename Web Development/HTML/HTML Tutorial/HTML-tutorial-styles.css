@@ -1,0 +1,57 @@
+header > h1, header > p, header > nav 
+{
+	text-align: center; 
+}
+
+.heading
+{
+	display: inline-block;
+	margin-right: 1%;
+}
+
+.definition
+{
+	display: inline-block;
+}
+
+.paragraph
+{
+	display: inline-block;
+	margin-right: 22%;
+}
+
+.unordered-list, .ordered-list, .description-list
+{
+	display: inline-block;
+	margin-right: 22%;
+}
+
+.div, .div-span
+{
+	display: inline-block;
+	margin-right: 35%;
+	margin: auto;
+	padding-right: 15%;
+}
+
+input, button 
+{
+	display: inline-block;
+	margin-right: 2%;
+}
+
+table
+{
+	display: block;
+	margin: auto;
+	width: 20%;
+	border: 2px solid black;
+}
+
+
+
+
+
+
+
+
