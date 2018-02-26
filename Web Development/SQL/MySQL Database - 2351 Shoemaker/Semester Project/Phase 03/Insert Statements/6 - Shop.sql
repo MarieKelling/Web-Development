@@ -1,0 +1,11 @@
+USE brendasmek;
+insert into Shop (ID, Address, ZipCode, Country, Phone) values (1, '541 Dottie Park', '75333', 'US', '937-804-7745');
+insert into Shop (ID, Address, ZipCode, Country, Phone) values (2, '00 Vernon Park', '27027', 'US', '214-542-8504');
+insert into Shop (ID, Address, ZipCode, Country, Phone) values (3, '8020 Atwood Parkway', '43612', 'US', '304-978-3141');
+insert into Shop (ID, Address, ZipCode, Country, Phone) values (4, '2864 Lakewood Alley', '59103', 'US', '412-413-0069');
+insert into Shop (ID, Address, ZipCode, Country, Phone) values (5, '83 Muir Trail', '50705', 'US', '323-730-2531');
+insert into Shop (ID, Address, ZipCode, Country, Phone) values (6, '7566 Grasskamp Court', '76173', 'US', '513-577-6430');
+insert into Shop (ID, Address, ZipCode, Country, Phone) values (7, '22268 Springview Alley', '56970', 'US', '415-208-6244');
+insert into Shop (ID, Address, ZipCode, Country, Phone) values (8, '6295 Carioca Pass', '44817', 'US', '816-129-5943');
+insert into Shop (ID, Address, ZipCode, Country, Phone) values (9, '17 Fallview Trail', '56208', 'US', '336-719-8355');
+insert into Shop (ID, Address, ZipCode, Country, Phone) values (10, '68049 Schiller Park', '89061', 'US', '754-715-6845');
