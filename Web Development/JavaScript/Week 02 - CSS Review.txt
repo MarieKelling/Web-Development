@@ -1,0 +1,60 @@
+Interactive Internet Programming Week 2 – CSS Review
+
+CSS can be applied to a tag, a class or an id.
+
+TAG:
+ p{
+ font-family: “Verdana”;
+ font-size: 18pt;                                    <p>My first paragraph.</p>
+ color: red;
+}
+
+CLASS: 
+.content{                                              <div class=”content”>
+color: blue;                               	        	Some classy content.
+} 
+                                                          </div>
+ID:
+#info   {                                                <div id=”info”>
+ color: green                                         	ome id info.
+}                                                           </div>
+
+CSS can be written:
+
+- Internally: inside the html page                          <style type=”text/css”>
+                                                                                 .myText{
+                                                                                 font-size:10pt;
+                                                                                 margin:10px;
+                                                                               }
+                                                                             </style>
+
+- Externally: in a .css file that is linked to             In separate style sheet
+
+- Inline: inside a tag attribute                               <div style=”font-size:10pt;margin:10px;”> 
+
+--------------------------------------------------------------------------------------------------------------------------------------
+		- display: inline-block;            						 //next to each other instead of on top of each other (block)
+		
+		FONTS:
+        - font-style: italic;
+		- font-weight: bold;
+		- font-family: 'Times New Roman';
+		- font-size: px, em, %
+		
+		BORDERS:
+		border: width style color;     						 //shorthand
+		border-(top, bottom, left, right): 				//specific side 
+		
+		
+		ALIGNING:
+images->  float: (left, right, center)                 	    // corespond with class name
+text->       text-align: (left, right, center, justify)
+		
+		
+		
+		
+		
+		
+		
+		
+		
