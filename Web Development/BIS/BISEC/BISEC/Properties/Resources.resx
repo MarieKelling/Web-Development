@@ -1,0 +1,199 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="A2LA_DOCUMENT_PATH" xml:space="preserve">
+    <value>\\bisserver\server\documentation\quality_documentation\A2LA_Required Documents</value>
+  </data>
+  <data name="APP_NAME" xml:space="preserve">
+    <value>BISEC</value>
+  </data>
+  <data name="BISEM_FILE_PATH" xml:space="preserve">
+    <value>\\bisserver\server\disk 1\BIS Equipment Management\BISEMv2\BISEMv2.mdb</value>
+  </data>
+  <data name="CALIBRATION_FORM_PATH" xml:space="preserve">
+    <value>\\bisserver\server\Cal Forms New</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="emp_center" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\emp-center.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="EMP_HANDBOOK_FILE_PATH" xml:space="preserve">
+    <value>\\bisserver\Server\Documentation\Quality_Documentation\Human_Resources\Handbook.doc</value>
+  </data>
+  <data name="FILE_PATH_CORRECTIVE_ACTION" xml:space="preserve">
+    <value>\\BISSERVER\SERVER\disk 1\BIS Corrective Action\CorrectiveAction.mdb</value>
+  </data>
+  <data name="FILE_PATH_PROCEDURE_EBOOK" xml:space="preserve">
+    <value>\\BISSERVER\SERVER\Documentation\Quality_Documentation\Procedures\BIS Complete Procedures eBook.pdf</value>
+  </data>
+  <data name="MANUAL_PATH" xml:space="preserve">
+    <value>\\bisserver\Server\manuals</value>
+  </data>
+  <data name="MY_COMPUTER_STRING" xml:space="preserve">
+    <value>My Computer</value>
+  </data>
+  <data name="ONSITE_FOLDER_PATH" xml:space="preserve">
+    <value>\\bisserver\server\disk 1\On_Siite_WorkSheets_List_</value>
+  </data>
+  <data name="PO_APP_INSTALLATION_URL" xml:space="preserve">
+    <value>\\bisserver\Server\Software\BISPurchasing\BISPurchasing.Prod.application</value>
+    <comment>Purchase Order db installation path</comment>
+  </data>
+  <data name="PUBLISHER_NAME_BIS" xml:space="preserve">
+    <value>Broadview Instrumentation</value>
+  </data>
+  <data name="PUBLISHER_NAME_HP" xml:space="preserve">
+    <value>Hewlett-Packard</value>
+  </data>
+  <data name="QC_APP_INSTALLATION_URL" xml:space="preserve">
+    <value>\\bisserver\Server\Software\BISQC\BISQC.application</value>
+    <comment>QC db installation path</comment>
+  </data>
+  <data name="QT_APP_INSTALLATION_URL" xml:space="preserve">
+    <value>\\bisserver\Server\Software\BISQoSys\BISQT.Desktop.application</value>
+    <comment>Quote db installation path</comment>
+  </data>
+  <data name="QUALITY_FORM_PATH" xml:space="preserve">
+    <value>\\bisserver\server\documentation\quality_documentation\forms</value>
+  </data>
+  <data name="QUALITY_MANUAL_FILE_PATH" xml:space="preserve">
+    <value>\\bisserver\Server\Documentation\Quality_Documentation\Quality_Manual\Quality_Manual.pdf</value>
+  </data>
+  <data name="SAFETY_HANDBOOK_FILE_PATH" xml:space="preserve">
+    <value>\\bisserver\Server\Documentation\Quality_Documentation\Human_Resources\Safety and Health Book_Rev1.10.doc</value>
+  </data>
+  <data name="SCOPE_FILE_PATH" xml:space="preserve">
+    <value>\\bisserver\Server\Documentation\Quality_Documentation\Scope\scope.pdf</value>
+  </data>
+  <data name="SERVER_PATH" xml:space="preserve">
+    <value>\\bisserver\server</value>
+  </data>
+  <data name="SUITE_NAME" xml:space="preserve">
+    <value>Business</value>
+  </data>
+  <data name="TRAINING_APP_INSTALLATION_URL" xml:space="preserve">
+    <value>\\BISSERVER\Server\Software\TrainingApp\Training.application</value>
+  </data>
+  <data name="WORK_FOLDER_DIR" xml:space="preserve">
+    <value>\\bisserver\server\disk 1\Work</value>
+  </data>
+  <data name="WORK_HISTORY_DIR" xml:space="preserve">
+    <value>\\bisserver\server\History</value>
+  </data>
+</root>

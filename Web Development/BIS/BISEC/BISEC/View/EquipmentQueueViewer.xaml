@@ -1,0 +1,152 @@
+﻿<Page x:Class="BISEC.View.EquipmentQueueViewer"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      >
+    <Page.Resources>
+        <Style x:Key="EntryFieldStyle" TargetType="Grid" >
+            <Setter Property="HorizontalAlignment" Value="Stretch" />
+            <Setter Property="VerticalAlignment" Value="Center" />
+            <Setter Property="Margin" Value="20,0" />
+        </Style>
+        
+        <DataTemplate x:Key="EquipmentTemplate">
+            <DataTemplate.Resources>
+                <Style TargetType="TextBlock">
+                    <Setter Property="Margin" Value="0,0,10,0"/>
+                </Style>
+            </DataTemplate.Resources>
+            <Label HorizontalAlignment="Left" 
+                   Background="Transparent" 
+                   DataContext="{Binding}"
+                   IsTabStop="True" BorderThickness="1">
+                <Label.Content>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                        </Grid.RowDefinitions>
+
+                        <TextBlock Text="Customer: " Grid.Column="0" Grid.Row="0"/>
+                        <TextBlock Text="{Binding CustomerName}" Grid.Column="1" Grid.ColumnSpan="4"
+                                   FontWeight="ExtraBlack"/>
+
+                        <TextBlock Text="Description: " Grid.Column="0" Grid.Row="1"/>
+                        <TextBlock Text="{Binding Description}" Grid.Column="1" Grid.ColumnSpan="4" Grid.Row="1"
+                                   />
+                        
+                        <TextBlock Text="Job: " Grid.Column="0" Grid.Row="2"/>
+                        <TextBlock Text="{Binding JobID}" Grid.Column="1"  Grid.Row="2"/>
+
+                        <TextBlock Text="PO: " Grid.Column="2" Grid.Row="2"/>
+                        <TextBlock Text="{Binding PaymentDetail}" Grid.Column="3"  Grid.Row="2"/>
+                        
+                        <TextBlock Text="Serial: " Grid.Column="0" Grid.Row="3"/>
+                        <TextBlock Text="{Binding SerialNumber}" Grid.Column="1" Grid.Row="3"/>
+
+                        <TextBlock Text="Date In: " Grid.Column="2" Grid.Row="3"/>
+                        <TextBlock Text="{Binding DateIn}" Grid.Column="3" Grid.Row="3"/>
+                    </Grid>
+                </Label.Content>
+            </Label>
+        </DataTemplate>
+
+        <DataTemplate x:Key="NoteTemplate">
+            <DataTemplate.Resources>
+                <Style TargetType="TextBlock">
+                    <Setter Property="Margin" Value="0,0,10,0"/>
+                </Style>
+            </DataTemplate.Resources>
+            <Label HorizontalAlignment="Left" 
+                   Background="Transparent" 
+                   DataContext="{Binding}"
+                   IsTabStop="True" BorderThickness="1">
+                <Label.Content>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="150"/>
+                            <ColumnDefinition Width="80"/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition/>
+                        </Grid.RowDefinitions>
+
+                        <TextBlock Text="{Binding CreationDate}" Grid.Column="0" Grid.Row="0"/>
+                        <TextBlock Text="{Binding EName}" Grid.Column="1" Grid.Row="0"/>
+                        <TextBlock Text="{Binding Note}" Grid.Column="3" Grid.Row="0"
+                                   Background="LightYellow" Padding="2"
+                                   TextWrapping="Wrap"
+                                   Width="300"/>
+                        
+                    </Grid>
+                </Label.Content>
+            </Label>
+        </DataTemplate>
+    </Page.Resources>
+    
+    <Grid HorizontalAlignment="Left">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="1"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <ListView x:Name="dirList2" Visibility="{Binding Path=ShowListStyle, UpdateSourceTrigger=PropertyChanged, Converter={StaticResource boolToVisibility}}"
+                 ItemsSource="{Binding Path=EQItems}" 
+                 ItemTemplate="{StaticResource EquipmentTemplate}"
+                 SelectedItem="{Binding CurrentEQItem}"
+                 BorderThickness="0" 
+                 HorizontalContentAlignment="Left" VerticalContentAlignment="Top" 
+                 Grid.Column="0" Grid.Row="0"
+                 ScrollViewer.HorizontalScrollBarVisibility="Disabled"
+                 >
+            
+        </ListView>
+        
+        <!-- notes -->
+        <StackPanel Grid.Column="1" >
+            <!--new note-->
+            <Grid Background="LightBlue" Visibility="{Binding NewNoteVisibility, Converter={StaticResource boolToVisibility}}">
+                <Grid.RowDefinitions>
+                    <RowDefinition />
+                </Grid.RowDefinitions>
+                <Grid Grid.Row="0" Background="{StaticResource brushWatermarkBackground}" Style="{StaticResource EntryFieldStyle}" >
+                    <TextBlock Margin="5,2" Text="Enter your note here..." Foreground="{StaticResource brushWatermarkForeground}"
+                                Visibility="{Binding ElementName=txtUserEntry, Path=Text.IsEmpty, Converter={StaticResource boolToVisibility}}" />
+                    <TextBox Name="txtUserEntry" Background="Transparent" BorderBrush="{StaticResource brushWatermarkBorder}"
+                                 Text="{Binding NewNote, UpdateSourceTrigger=PropertyChanged}"
+                                 >
+                        <TextBox.InputBindings>
+                            <KeyBinding Key="Enter" Command="{Binding AddNoteCommand}"/>
+                        </TextBox.InputBindings>
+                    </TextBox>
+                </Grid>
+            </Grid>
+            <ListView ItemsSource="{Binding Path=NoteItems}" 
+                  ItemTemplate="{StaticResource NoteTemplate}"
+                 BorderThickness="0" 
+                 HorizontalContentAlignment="Left" VerticalContentAlignment="Top" 
+                 ScrollViewer.HorizontalScrollBarVisibility="Disabled"
+                 >
+            </ListView>
+        </StackPanel>
+        
+        
+        
+        
+    </Grid>
+</Page>

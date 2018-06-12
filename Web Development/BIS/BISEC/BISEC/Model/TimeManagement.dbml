@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="Time_Management" Class="TimeManagementDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=BISSERVER;Initial Catalog=Time_Management;Persist Security Info=True;User ID=dbuser" SettingsObjectName="BISEC.Properties.Settings" SettingsPropertyName="TIMEDBConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.BISECDropdown_Activity" Member="Dropdown_Activities">
+    <Type Name="Dropdown_Activity">
+      <Column Name="Code" Type="System.String" DbType="VarChar(4)" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.BISECDropdown_Car" Member="Dropdown_Cars">
+    <Type Name="Dropdown_Car">
+      <Column Name="CAR_DESCRIPTION" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="CAR_ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsDbGenerated="true" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.BISECDropdown_ClientLocation" Member="Dropdown_ClientLocations">
+    <Type Name="Dropdown_ClientLocation">
+      <Column Name="ClientDescript" Type="System.String" DbType="NVarChar(130)" CanBeNull="true" />
+      <Column Name="ClientLocationID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.EMPLOYEE_ACTIVITY_LOGS" Member="Activity_Logs">
+    <Type Name="Activity_Log">
+      <Column Name="log_id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="activity_code" Type="System.String" DbType="VarChar(4)" CanBeNull="true" />
+      <Column Name="start_time" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="end_time" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="location_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="car_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="comments_254" Type="System.String" DbType="VarChar(254)" CanBeNull="true" />
+      <Column Name="need_approval_sw" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="approved_sw" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="employee_id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="activity_date" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="punch_io_yn" Type="System.String" DbType="VarChar(1)" CanBeNull="true" />
+      <Column Name="all_day_sw" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="log_status" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="LunchBreakMinutes" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="OnsiteCoEmployees" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="LocationName" Type="System.String" DbType="VarChar(254)" CanBeNull="true" />
+      <Column Name="orig_location_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="dtCreation" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+</Database>

@@ -1,0 +1,29 @@
+﻿<Window x:Class="BISEC.View.NewReleaseSplashScreen"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        WindowStyle="None"
+        WindowStartupLocation="CenterScreen"
+        SizeToContent="WidthAndHeight"
+        xmlns:p="clr-namespace:BISEC.Properties"
+        >
+    <StackPanel>
+        <StackPanel Margin="10" Background="LightBlue">
+            <Label Content="BISEC - What's new in the latest version" FontSize="20" FontWeight="Bold"/>
+            <Label Content="Version 1.1.0.0"/>
+            <Label Content="1. Added 'Company Organzation Chart' on the main screen to show active employee's information such as phone, title."/>
+            <Label Content="2. Added History Folder on the main screen."/>
+            <Label Content="Version 1.0.2.6"/>
+            <Label Content="1. Added printing ability for missing payment report."/>
+            <Label Content="2. Added main icon for the app"/>
+        </StackPanel>
+        <DockPanel Margin="10" >
+            <CheckBox IsChecked="{Binding Source={x:Static p:Settings.Default}, Path=DoNotShowNewReleaseSplashScreenAtStartup, Mode=TwoWay}" 
+                      Content="Do not show at start up" DockPanel.Dock="Left"
+                      Margin="5"
+                      x:Name="btnOK"/>
+            <Button Content="OK" HorizontalAlignment="Right" 
+                    DockPanel.Dock="Right"
+                    Margin="5" Width="100" Click="btnOk_Click"/>
+        </DockPanel>
+    </StackPanel>
+</Window>

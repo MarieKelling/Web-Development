@@ -1,0 +1,84 @@
+﻿<Page x:Class="BISEC.View.EquipmentListPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      ShowsNavigationUI="False">
+
+    <Page.Resources>
+        <DataTemplate x:Key="PONoteTemplate">
+            <StackPanel Margin="2" Background="LightYellow">
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch" Background="{StaticResource App_BlueTheme}">
+                    <TextBlock Text="{Binding Path=DateAdded, StringFormat=dd.MM.yy HH:mm}" FontWeight="ExtraLight" Foreground="White"/>
+                    <TextBlock Text=" | " FontWeight="ExtraLight" Foreground="White"/>
+                    <TextBlock Text="{Binding Path=CreatorName}" FontWeight="ExtraLight" Foreground="White"/>
+                </StackPanel>
+                <TextBlock TextWrapping="Wrap" Text="{Binding Path=Note}" MaxWidth="200"/>
+            </StackPanel>
+        </DataTemplate>
+    </Page.Resources>
+    <StackPanel>
+        <Image Source="/Resource/Img/loading.gif" HorizontalAlignment="Center" Width="100"
+               Visibility="{Binding ShowStatusLabelSwitch, Converter={StaticResource boolToVisibility}}"/>
+        
+        <Grid Visibility="{Binding ShowGridSwitch, Converter={StaticResource boolToVisibility}}">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="1"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+            </Grid.RowDefinitions>
+            <StackPanel Orientation="Horizontal" Margin="1" Grid.Row="0" Grid.Column="0" >
+                <Label Content="{Binding DisplayName}" Margin="2" Style="{StaticResource header2TextStyle}"/>
+
+                <Button Margin="2" ToolTip="Print" Width="25"
+                    Command="{Binding PrintCommand}">
+                    <Image Source="/Resource/Img/print.png" />
+                </Button>
+            </StackPanel>
+
+            <DataGrid Margin="3" Name="dgTraining" Grid.Row="1" Grid.Column="0"
+                  ItemsSource="{Binding ItemListView}"
+                  AutoGenerateColumns="True"
+                  VerticalGridLinesBrush="Transparent"
+                  HorizontalGridLinesBrush="White"
+                  CanUserAddRows="False"
+                  AlternationCount="2"
+                  AlternatingRowBackground="#CEECF5"
+                  MaxHeight="500"
+                  IsReadOnly="True"
+                  AutoGeneratingColumn="dg_AutoGeneratingColumn"
+                  >
+                <!--<DataGrid>
+                <DataGrid.Resources>
+                    <Style TargetType="{x:Type DataGridColumnHeader}">
+                        <Setter Property="Background" Value="DarkBlue" />
+                    </Style>
+                </DataGrid.Resources>
+            </DataGrid>-->
+                <DataGrid.Columns>
+                    <!--Edit Training button-->
+                    <!--<DataGridTemplateColumn Width="auto" >
+                        <DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <Grid>
+                                    <Button Height="auto" Foreground="Blue" FontWeight="SemiBold" Margin="3,0,3,0" FontStyle="Italic"
+                                            ToolTip="Edit"
+                                            Command="{Binding Path=DataContext.UpdateJobCommand,RelativeSource={RelativeSource AncestorType={x:Type DataGrid}}}"
+                                            CommandParameter="{Binding}"
+                                        >
+                                        <Image Source="/Resource/Img/pencil.png" Width="15"/>
+                                    </Button>
+                                </Grid>
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                    </DataGridTemplateColumn>-->
+                </DataGrid.Columns>
+            </DataGrid>
+        </Grid>
+    </StackPanel>
+        
+
+</Page>
