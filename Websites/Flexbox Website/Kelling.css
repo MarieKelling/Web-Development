@@ -1,0 +1,56 @@
+*  {
+	box-sizing: border-box;		/* Ensures that the box doesn't break due to extra padding */
+	/*margin-bottom: 1%;*/
+}
+
+html, body {
+	height: 100%;
+    margin: 0;
+	overflow-x: hidden;			/* Prevent horizontal scrolling */
+}
+
+header  {
+	background-color: #F1F1F1;
+    text-align: center;
+    padding: 20px;
+	font: 26px Georgia, serif;
+	margin-bottom: 2%;
+}
+
+.flex-containerRow  {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+	background-color: grey;
+	margin-bottom: 2%;
+}
+
+.flex-containerRow > div  {
+	background-color: #f1f1f1;
+	width: 25%;
+	margin: 1% .5%;
+	text-align: center;
+	line-height: 300px;
+	font-size: 30px;
+}
+
+
+.flex-containerColumn  {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	background-color: grey;
+	margin-bottom: 2%;
+}
+
+.flex-containerColumn > div  {
+	background-color: #f1f1f1;
+	width: 25%;
+	margin: 1% .5%;
+	text-align: center;
+	line-height: 100px;
+	width: 80%;
+	font-size: 30px;
+}

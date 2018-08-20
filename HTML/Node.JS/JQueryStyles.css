@@ -1,0 +1,43 @@
+*  {
+	box-sizing: border-box;		/* Ensures that the box doesn't break due to extra padding */
+	/*margin-bottom: 1%;*/
+}
+
+html, body {
+	height: 100%;
+    margin: 0;
+	background-color: AliceBlue;
+	/*overflow-x: hidden;			/* Prevent horizontal scrolling */
+}
+
+header {
+		background-color: Grey;
+}
+
+h1 {
+		text-align: center;
+		padding-top: 3%; 
+		padding-bottom: 3%;
+		font-size: 2 em;
+}
+
+button {
+		/*display: block; */
+		margin-bottom: 5px;
+}
+
+div {
+		display: block;				/* How to center n inline-block element */
+		margin: auto;
+		width: 30%;
+		height: 35%;
+		text-align: center;
+		background-color: LightGrey;
+		margin-bottom: 2%;
+}
+
+.form1  {
+	float: right;
+}
+
+
