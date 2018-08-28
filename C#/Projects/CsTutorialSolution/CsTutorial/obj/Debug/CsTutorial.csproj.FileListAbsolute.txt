@@ -1,7 +1,0 @@
-C:\Users\Marie Kelling\Desktop\Web-Development\Web Development\C#\Projects\CsTutorialSolution\CsTutorial\bin\Debug\CsTutorial.exe.config
-C:\Users\Marie Kelling\Desktop\Web-Development\Web Development\C#\Projects\CsTutorialSolution\CsTutorial\bin\Debug\CsTutorial.exe
-C:\Users\Marie Kelling\Desktop\Web-Development\Web Development\C#\Projects\CsTutorialSolution\CsTutorial\bin\Debug\CsTutorial.pdb
-C:\Users\Marie Kelling\Desktop\Web-Development\Web Development\C#\Projects\CsTutorialSolution\CsTutorial\obj\Debug\CsTutorial.csprojResolveAssemblyReference.cache
-C:\Users\Marie Kelling\Desktop\Web-Development\Web Development\C#\Projects\CsTutorialSolution\CsTutorial\obj\Debug\CsTutorial.csproj.CoreCompileInputs.cache
-C:\Users\Marie Kelling\Desktop\Web-Development\Web Development\C#\Projects\CsTutorialSolution\CsTutorial\obj\Debug\CsTutorial.exe
-C:\Users\Marie Kelling\Desktop\Web-Development\Web Development\C#\Projects\CsTutorialSolution\CsTutorial\obj\Debug\CsTutorial.pdb

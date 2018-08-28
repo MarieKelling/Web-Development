@@ -1,0 +1,91 @@
+﻿/*General Styles*/
+*  {
+	box-sizing: border-box;		/* Ensures that the box doesn't break due to extra padding */
+	/*margin-bottom: 1%;*/
+}
+
+html, body {
+	height: 100%;
+    margin: 0;
+	background-color: AliceBlue;
+	/*overflow-x: hidden;			/* Prevent horizontal scrolling */
+}
+
+header {
+		background-color: Grey;
+}
+
+h1 {
+		text-align: center;
+		padding-top: 3%; 
+		padding-bottom: 3%;
+		font-size: 30px;
+}
+
+button {
+		/*display: block; */
+		margin-bottom: 5px;
+}
+
+.form1  {
+	float: right;
+}
+
+/*Scoped Specific Styles*/
+.home .container  {
+    border: 2px solid black;
+    width: 500px;
+    height: 200px;
+    display: block;				
+	margin: auto;
+	width: 50%;
+}
+
+.home .container div  {
+    display: inline-block;
+    position: relative;
+    text-align: center;
+    font-weight: bold;
+}
+.home #click  {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+}
+
+.home #hide  {
+    width: 100px;
+    height: 100px;
+    background-color: orange;
+}
+
+.home #fade  {
+    width: 100px;
+    height: 100px;
+    background-color: lightyellow;
+}
+
+.home #drag  {
+    width: 100px;
+    height: 100px;
+    background-color: forestgreen;
+}
+
+.home #animate  {
+    width: 200px;
+    height: 100px;
+    background-color: blue;
+}
+
+
+/* How to center n inline-block element */
+/*div {
+		display: block;				
+		margin: auto;
+		width: 30%;
+		height: 35%;
+		text-align: center;
+		background-color: LightGrey;
+		margin-bottom: 2%;
+}*/
+

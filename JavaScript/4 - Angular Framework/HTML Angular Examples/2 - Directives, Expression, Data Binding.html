@@ -1,0 +1,32 @@
+<!doctype html>
+<html data-ng-app=""> <!-- Declares as Angular App -->
+
+	<head>
+		<title>Directives, Expressions, & Data Binding</title> 
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+	</head>
+	
+	<body>
+				<h1>Using Directives Expressions, & Data Binding</h1>
+	
+				<div>Name:</div> 
+				<input type="text" ng-model="name" /> {{name}} 
+				
+				<div data-ng-init="names=['Ted', 'Marshall', 'Lilly', 'Barney', 'Robin']">
+					<h3>Iterating With The ng-repeat Directive</h3>
+					<ul>
+						<li data-ng-repeat="name in names">{{name}}</li> 
+					</ul>
+			
+			</div>
+			
+			<div data-ng-init="people= [{name: 'Marie', city: 'Sagamore Hills'}, 
+														{name: 'Brandon', city: 'Northfield Village'}, 
+														{name: 'James', city: 'Northfield Center'}]"> <!-- Array of People Objects -->
+				<h3>Apply A Filter To The List</h3>
+				<ul>
+					<li data-ng-repeat="person in people | filter: name | orderBy: city">{{person.name | uppercase}} - {{person.city | lowercase}}</li> 
+				</ul>							<!-- Filters by what the user enters into the name input -->
+	</body>
+	
+</html> 	

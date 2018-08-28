@@ -1,0 +1,48 @@
+﻿@model jQueryAjaxMVC.Models.HomeModel
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Index</title>
+        <meta name="viewport" content="width=device-width" />
+        <link href="~/Styles/Home.css" rel="stylesheet" />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> @*google*@
+        <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script> @*microsoft*@
+        <script src="~/Scripts/Home.js"></script>
+   
+    </head>
+    <body>
+            <header>
+                <h1>@Model.PageTitle</h1>
+            </header>
+            @*<h2 id="coords"></h2>*@
+
+            <main class="home">
+                <button class="hide">Hide</button>
+                <button id="show">Show</button>
+                <button id="toggle">Toggle</button>
+
+                <form class="form1">
+                    <label>Name</label>
+                    <input type="text" id="name"><br>
+                    <label>Phone</label>
+                    <input type="text" id="phone">
+                </form>
+
+                <div class="container">
+                    <div id="click">Click Me</div>
+                    <div id="hide">Hide Me</div>
+                    <div id="fade">Fade Me</div>
+                    <div id="drag">Drag Me</div>
+                </div>
+                <div class="container">
+                    <div id="animate">Animate Me</div>
+                </div>
+            </main>
+    </body>
+</html>
