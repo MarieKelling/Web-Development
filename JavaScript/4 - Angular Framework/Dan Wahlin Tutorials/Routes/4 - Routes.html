@@ -1,0 +1,53 @@
+<!doctype html>
+<html data-ng-app="app"> 
+	<head>
+		<title>Angular Routes</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+	</head>
+	
+	<body> <!-- With added Routes & Views, we no longer need the Controller specifiction -->
+				<h1>Angular Routes</h1> <!--   -->
+				
+				<div>
+				<!-- Represents Placeholder for the Views -->
+					<div data-ng-view></div>
+				</div>
+				
+				<script>	
+					var app = angular.module("app", []); 					
+				
+					app.controller("SimpleController", function($scope)  {						
+						$scope.people =  [
+							{name: 'Marie', city: 'Sagamore Hills'}, 
+							{name: 'Brandon', city: 'Northfield Village'}, 
+							{name: 'James', city: 'Northfield Center'}
+						]; 
+
+						$scope.addPerson = function()  {					//Push function?? 
+							$scope.person.push(
+								{
+										name: $scope.newPerson.name,
+										city: $scope.newPerson.city
+								});
+						};
+					});	
+					
+					app.config(function ($routeProvider)  {
+							$routeProvider 
+								.when('/View1',
+									{  
+											controller: 'SimpleController', 
+											templateUrl: 'View1.html'
+									})
+								.when('/View2',
+									{  
+											controller: 'SimpleController', 
+											templateUrl: 'View2.html'
+									})
+								.otherwise {{ redirectTo: '/View1'  }});		
+					});
+				</script>
+
+	</body>
+	
+</html> 	

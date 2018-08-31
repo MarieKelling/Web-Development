@@ -12,12 +12,19 @@ html, body {
 header  {
 	background-color: #F1F1F1;
     text-align: center;
-    padding: 20px;
-	font: 26px Georgia, serif;
+    padding: 18px;
+	font: 22px Georgia, serif;
 	margin-bottom: 2%;
 }
+header > p  {
+	font-size: 15px;
+}
+h2  {
+	text-align: center;
+}
 
-.flex-containerRow  {
+/*Rows*/
+.flex-container-row  {
 	display: flex;
 	flex-direction: row;
 	align-items: center;
@@ -25,18 +32,17 @@ header  {
 	background-color: grey;
 	margin-bottom: 2%;
 }
-
-.flex-containerRow > div  {
+.flex-container-row > div  {
 	background-color: #f1f1f1;
 	width: 25%;
 	margin: 1% .5%;
 	text-align: center;
-	line-height: 300px;
+	line-height: 100px;
 	font-size: 30px;
 }
 
-
-.flex-containerColumn  {
+/*Columns*/
+.flex-container-column  {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -44,13 +50,12 @@ header  {
 	background-color: grey;
 	margin-bottom: 2%;
 }
-
-.flex-containerColumn > div  {
+.flex-container-column > div  {
 	background-color: #f1f1f1;
 	width: 25%;
 	margin: 1% .5%;
 	text-align: center;
-	line-height: 100px;
-	width: 80%;
+	line-height: 150px;
+	width: 50%;
 	font-size: 30px;
 }
