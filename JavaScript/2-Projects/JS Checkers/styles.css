@@ -1,0 +1,38 @@
+*  {
+
+}
+
+header  {
+	text-align: center;
+}
+
+.board  {
+	/*display: inline-block;*/
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	width: 80%;
+	height: 60%
+	padding: 2%;
+	text-align: center;
+	background-color: grey;
+}
+
+.row  {
+	justify-content: center;
+	background-color: snow;
+}
+.row > div  {
+	display: inline;
+	width: 10%;
+	padding: 2%;
+	border: solid black 1px;
+	cursor: pointer;
+}
+
+.row-blank > div  {
+	display: inline;
+	padding: 2%;
+	border: solid black 2px;
+	cursor: pointer;
+}
