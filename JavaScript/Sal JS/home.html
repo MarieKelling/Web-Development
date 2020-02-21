@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<title>Sal JS</title>
+		<link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="./node_modules/sal.js/dist/sal.css">
+		<script type="text/javascript" src="js/jquery.3.3.1.min.js"></script>
+		<script type="text/javascript" src="js/main.js"></script>
+
+	</head>
+	
+    <body>
+    	<header>
+            <h1>Home Page</h1>
+            <nav class="header-nav">
+                <ul class="nav">
+                    <li><a class="link" href="home.html">Home</a></li>
+                    <li><a class="link" href="about.html">About</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <div class="page-content">  
+
+            <div class="slide-element" data-sal="fade" data-sal-duration="2000" data-sal-delay="500" data-sal-easing="ease-out-bounce">Fade</div>
+            <div class="slide-element" data-sal="slide-up" data-sal-duration="1500" data-sal-delay="500" data-sal-easing="ease-out-bounce">Slide Up</div>
+            <div class="slide-element" data-sal="slide-down" data-sal-duration="1500" data-sal-delay="500">Slide Down</div>
+            <div class="slide-element" data-sal="slide-left" data-sal-duration="1500" data-sal-delay="500">Slide Left</div> 
+            <div class="slide-element" data-sal="slide-right" data-sal-duration="1500" data-sal-delay="500">Slide Right</div> 
+            <div class="slide-element" data-sal="zoom-in" data-sal-duration="1500" data-sal-delay="500">Zoom In</div> 
+            <div class="slide-element" data-sal="zoom-out" data-sal-duration="1500" data-sal-delay="500">Zoom Out</div> 
+            <div class="slide-element" data-sal="flip-up" data-sal-duration="1500" data-sal-delay="500">Flip Up</div> 
+            <div class="slide-element" data-sal="flip-down" data-sal-duration="1500" data-sal-delay="500">Flip Down</div> 
+            <div class="slide-element" data-sal="flip-left" data-sal-duration="1500" data-sal-delay="500">Flip Left</div> 
+            <div class="slide-element" data-sal="flip-right" data-sal-duration="1500" data-sal-delay="500">Flip Right</div> 
+
+
+
+        </div>
+
+        <script type="text/javascript" src="./node_modules/sal.js/dist/sal.js"></script>
+        <script>
+            // Initialize Sal.js Library 
+            sal({
+                threshold: .7,   //Percentage of an element's area that needs to be visible to launch animation
+                once: true,    //true - only launches animation once. false - launches animation continuously 
+            });
+
+            // Get element with ".animated" class, which has "data-sal" attribute
+            const element = document.querySelector('.slide-element');
+
+            element.addEventListener('sal:in', ({ detail }) => {
+              console.log('entering', detail.target);
+            });
+        </script>
+    </body>
+
+    <footer></footer>
+
+</html>

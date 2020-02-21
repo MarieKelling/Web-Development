@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<title>AOS JS</title>
+		<link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+		<script type="text/javascript" src="js/jquery.3.3.1.min.js"></script>
+		<script type="text/javascript" src="js/main.js"></script>
+
+	</head>
+	
+    <body>
+    	<header>
+            <h1>Home Page</h1>
+            <nav class="header-nav">
+                <ul class="nav">
+                    <li><a class="link" href="home.html">Home</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <div class="page-content">  
+
+            <h1>Fade Animations:</h1>
+            <div class="slide-element" data-aos="fade">Fade</div>
+            <div class="slide-element" data-aos="fade-up">Fade Up</div>
+            <div class="slide-element" data-aos="fade-down">Fade Down</div>
+            <div class="slide-element" data-aos="fade-right">Fade Right</div>
+            <div class="slide-element" data-aos="fade-left">Fade Left</div>
+            <div class="slide-element" data-aos="fade-up-right">Fade Up Right</div>
+            <div class="slide-element" data-aos="fade-up-left">Fade Up Left</div>
+            <div class="slide-element" data-aos="fade-down-right">Fade Down Right</div>
+            <div class="slide-element" data-aos="fade-down-left">Fade Down Left</div>
+
+            <h1>Flip Animations:</h1>
+            <div class="slide-element" data-aos="flip-up">Flip Up</div>
+            <div class="slide-element" data-aos="flip-down">Flip Down</div>
+            <div class="slide-element" data-aos="flip-right">Flip Right</div>
+            <div class="slide-element" data-aos="flip-left">Flip Left</div>
+
+            <h1>Slide Animations:</h1>
+            <div class="slide-element" data-aos="slide-up">Slide Up</div>
+            <div class="slide-element" data-aos="slide-down">Slide Down</div>
+            <div class="slide-element" data-aos="slide-right">Slide Right</div>
+            <div class="slide-element" data-aos="slide-left">Slide Left</div>
+
+            <h1>Zoom Animations:</h1>
+            <div class="slide-element" data-aos="zoom-in">Zoom In</div>
+            <div class="slide-element" data-aos="zoom-in-up">Zoom In Up</div>
+            <div class="slide-element" data-aos="zoom-in-down">Zoom In Down</div>
+            <div class="slide-element" data-aos="zoom-in-right">Zoom In Right</div>
+            <div class="slide-element" data-aos="zoom-in-left">Zoom In Left</div>
+            <div class="slide-element" data-aos="zoom-out">Zoom Out</div>
+            <div class="slide-element" data-aos="zoom-out-up">Zoom Out Up</div>
+            <div class="slide-element" data-aos="zoom-out-down">Zoom Out Down</div>
+            <div class="slide-element" data-aos="zoom-out-right">Zoom Out Right</div>
+            <div class="slide-element" data-aos="zoom-out-left">Zoom Out Left</div>
+
+        </div>
+
+        <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+        <script>
+            // Initialize AOS JS: https://github.com/michalsnik/aos
+            AOS.init({
+                offset: 200,
+                delay: 100,
+                duration: 2000,
+                easing: 'ease',
+                once: false,
+                mirror: true,
+                anchorPlacement: 'top-bottom'
+            });
+
+
+        </script>
+    </body>
+
+    <footer></footer>
+
+</html>

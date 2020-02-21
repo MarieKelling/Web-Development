@@ -1,0 +1,56 @@
+* {
+	box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+
+.to-do-container {
+	text-align: center;
+}
+
+.to-do-container h2 {
+	margin-bottom: 40px;
+	margin-top: 50px;
+	font-size: 30px;
+}
+
+.to-do-list {
+
+}
+
+.to-do-item {
+	font-size: 30px;
+	padding: 20px;
+	position: relative;
+}
+.remove-item {
+	position: absolute;
+    right: 40%;
+    font-size: 12px;
+    cursor: pointer;
+    z-index: 5;
+}
+
+.add-btn {
+	cursor: pointer;
+	display: inline-block;
+	background-color: lightsteelblue;
+	padding: 25px 30px;
+    border-radius: 50%;
+    
+}
+
+.user-input {
+	display: block;
+    margin: 0 auto;
+    height: 44px;
+    width: 200px;
+    font-size: 21px;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+    text-align: center;
+}
