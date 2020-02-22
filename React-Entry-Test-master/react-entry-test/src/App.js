@@ -98,7 +98,7 @@ class App extends React.Component {
           <br></br>
           {/* Add a text area for the log: */}
           <NumberLog log={this.state.log} />
-          <p> By: Marie Kelling - 2/20/2020</p>
+          <p> By: Marie Kelling - 2/22/2020</p>
           <p>	&#169; 2020 World Shipping, Inc.</p>
       </div>
     );
