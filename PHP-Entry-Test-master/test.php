@@ -254,6 +254,7 @@ h3 {
 // Format: date (Month/Day/Year) and time (Hour:Minutes:Seconds)
 // Disable modifying the text box after loading
 //$dateTime = "Current Date and Time";
+	date_default_timezone_set('US/Eastern');
     $dateTime = date("m/d/y").' '.date("h:i:sa");
 
 echo '<h3>Current Date and Time:</h3>';
@@ -288,7 +289,7 @@ echo '<input id="text" type="text" value="'.$dateTime.'" disabled="true">';
 <br />
 <br />
 <br />
-<p>&#169; 2019 World Shipping, Inc.</p>
+<p>&#169; 2020 World Shipping, Inc.</p>
     
     
 <script>
