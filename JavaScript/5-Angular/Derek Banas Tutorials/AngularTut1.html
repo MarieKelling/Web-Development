@@ -1,0 +1,40 @@
+<!doctype html>
+<html ng-app="app"> <!-- Declares as Angular App. Can also do ng-app="" -->
+
+	<head>
+		<title>Angular Tutorial</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+		<script src="examp1.js"></script>
+		<script src="examp2.js"></script>
+	</head>
+	
+	<body ng-init="person = {fName: 'Marie', lName: 'Kelling'}"> <!-- Initilaizes application data -->
+	
+			<div ng-controller="controller"> <!-- Declares this portion as a View; Will use $scope object to provide data to our view -->
+				<h3>Values:</h3>
+				<input type="text" ng-model="firstNum" /> <br>
+				<input type="text" ng-model="secondNum" /> <br>
+				
+				<button ng-click="updateValue()">Sum</button>
+				<!-- Data Binding --> 
+				{{calculation}}											<!-- Uses the value of 'calculation' on the model to display the calculation of the 2 numbers -->
+				
+				<h3>On the Fly Expression</h3>
+				<p>5 + 5 = {{5 + 5}}</p>
+				
+				<h3>Grab first value using an expression</h3>
+				<p>Your first value is {{firstNum}}</p> <!-- Grab first value using an expression -->
+				
+				<h3>Grab second value using a directive</h3>
+				<p>Your second value is						   <!-- Grab second value using a directive -->
+					<span data-ng-bind="secondNum"></p>
+					
+				<h3>Grab & Display the Name values of the Person object that was defined in the ng-init directive</h3> 
+				<p>You entered: {{person.fName}} as the first name</p>
+				<p>You entered: {{person.lName}} as the last name</p> 
+				
+			</div>
+	
+	</body>
+	
+</html> 	

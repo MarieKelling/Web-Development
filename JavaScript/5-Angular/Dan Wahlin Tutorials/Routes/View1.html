@@ -1,0 +1,31 @@
+<!doctype html>
+<html data-ng-app="app"> 
+
+	<head>
+		<title>View 1</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+	</head>
+	
+	<body>
+	
+			<h1>View 1</h2> 
+	
+			<div>Name:</div> 
+			<input type="text" data-ng-model="filter.name" />
+	
+			<ul>
+				<li data-ng-repeat="person in people | filter: filter.name | orderBy: city">{{person.name | uppercase}} - {{person.city | lowercase}}</li> 
+			</ul>
+			
+			<div>Person Name:</div>
+			<input type="text" data-ng-model="newPerson.name" />	<!-- Creates a new property on the scope 'Person' that then has a sub property 'name' -->
+			
+			<div>Person City:</div>
+			<input type="text" data-ng-model="newPerson.city" />
+			
+			<button data-ng-click="addPerson()">Add Person</div> <!-- This will let us interact wiht the Controller -->
+			
+			<a href="#/View2">View 2></a> 
+	</body>
+	
+</html> 	
